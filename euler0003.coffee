@@ -12,10 +12,10 @@ primes = (max) ->
     sieve = [1..max]
     step = 2
     while step <= max
-        x = step * 2
-        while x <= max
-            sieve[x-1] = null
-            x += step
+        multiple = step * 2
+        while multiple <= max
+            sieve[multiple-1] = null
+            multiple += step
         step++
     (x for x in sieve when x != null)
 
